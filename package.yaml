@@ -1,0 +1,51 @@
+name:                optional
+version:             0.1.2
+license:             BSD3
+license-file:        other-licence.md
+author:              "Tony Morris <ʇǝu˙sıɹɹoɯʇ@ןןǝʞsɐɥ>"
+maintainer:          "Tony Morris"
+copyright:           "Copyright (C) 2013-2014 Tony MOrris"
+synopsis:            "Using type-classes for optional function arguments"
+category:            "Development"
+build-type:          Custom
+homepage:            "https://github.com/tonymorris/optional"
+bug-reports:         "https://github.com/tonymorris/optional/issues"
+
+extra-source-files:
+- changelog.md
+
+source-repository:
+    type: git
+    location: git@github.com:tonymorris/optional.git
+
+description:
+    <<http://i.imgur.com/Ns5hntl.jpg>>
+    .
+    A representation of latitude and longitude
+ 
+source-repository:
+    type: git
+    location: git@github.com:NICTA/coordinate.git
+
+
+#flag: "small_base"
+#description: "Choose the new, split-up base package"
+
+library:
+    source-dirs: src
+    dependencies:
+    - base >= 3 && < 5
+    - lens # >= 4.0
+    - radian #>= 0.0.4
+    - transformers
+      #- optional #>= 0.0.1
+    default-extensions:
+    - "NoImplicitPrelude"
+    - "MultiParamTypeClasses"
+    - "FlexibleConstants"
+    - "FlexibleInstances"
+    ghc-options:
+    - "-Wall"
+    exposed-modules:
+    - System.Args.Optional
+
